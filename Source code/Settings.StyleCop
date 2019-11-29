@@ -1,0 +1,82 @@
+﻿<!--
+Copyright © 2016–2017, 2019 eMedia Intellect.
+
+This file is part of eMI User Controls Library.
+
+eMI User Controls Library is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+eMI User Controls Library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with eMI User Controls Library. If not, see http://www.gnu.org/licenses/.
+-->
+<StyleCopSettings Version="105">
+	<Analyzers>
+		<Analyzer AnalyzerId="StyleCop.CSharp.DocumentationRules">
+			<Rules>
+				<Rule Name="DocumentationTextMustBeginWithACapitalLetter">
+					<RuleSettings>
+						<BooleanProperty Name="Enabled">True</BooleanProperty>
+					</RuleSettings>
+				</Rule>
+				<Rule Name="DocumentationTextMustEndWithAPeriod">
+					<RuleSettings>
+						<BooleanProperty Name="Enabled">True</BooleanProperty>
+					</RuleSettings>
+				</Rule>
+				<Rule Name="DocumentationTextMustMeetMinimumCharacterLength">
+					<RuleSettings>
+						<BooleanProperty Name="Enabled">True</BooleanProperty>
+					</RuleSettings>
+				</Rule>
+				<Rule Name="PropertyDocumentationMustHaveValue">
+					<RuleSettings>
+						<BooleanProperty Name="Enabled">True</BooleanProperty>
+					</RuleSettings>
+				</Rule>
+				<Rule Name="PropertyDocumentationMustHaveValueText">
+					<RuleSettings>
+						<BooleanProperty Name="Enabled">True</BooleanProperty>
+					</RuleSettings>
+				</Rule>
+			</Rules>
+			<AnalyzerSettings>
+				<StringProperty Name="CompanyName">eMedia Intellect</StringProperty>
+				<StringProperty Name="Copyright">Copyright © 2016–2017, 2019 eMedia Intellect.</StringProperty>
+			</AnalyzerSettings>
+		</Analyzer>
+		<Analyzer AnalyzerId="StyleCop.CSharp.NamingRules">
+			<AnalyzerSettings>
+				<CollectionProperty Name="Hungarian">
+					<Value>is</Value>
+				</CollectionProperty>
+			</AnalyzerSettings>
+		</Analyzer>
+		<Analyzer AnalyzerId="StyleCop.CSharp.SpacingRules">
+			<Rules>
+				<Rule Name="TabsMustNotBeUsed">
+					<RuleSettings>
+						<BooleanProperty Name="Enabled">False</BooleanProperty>
+					</RuleSettings>
+				</Rule>
+			</Rules>
+		</Analyzer>
+	</Analyzers>
+	<GlobalSettings>
+		<BooleanProperty Name="WriteCache">False</BooleanProperty>
+		<IntegerProperty Name="DaysToCheckForUpdates">0</IntegerProperty>
+		<StringProperty Name="Culture">en-GB</StringProperty>
+		<CollectionProperty Name="RecognizedWords">
+			<Value>ascendingly</Value>
+			<Value>closeable</Value>
+			<Value>endianness</Value>
+			<Value>xaml</Value>
+		</CollectionProperty>
+	</GlobalSettings>
+</StyleCopSettings>

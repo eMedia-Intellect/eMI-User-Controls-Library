@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Emi.UserControls.FileSystemBrowserWindowTesting</name>
+    </assembly>
+    <members>
+        <member name="T:Emi.UserControls.App">
+            <summary>Represents the application.</summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:Emi.UserControls.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Emi.UserControls.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:Emi.UserControls.MainWindow">
+            <summary>Represents the main window of the application.</summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:Emi.UserControls.MainWindow.#ctor">
+            <summary>Initialises a new instance of the <see cref="T:Emi.UserControls.MainWindow"/> class.</summary>
+        </member>
+        <member name="M:Emi.UserControls.MainWindow.ResetButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>Resets all controls to their default state when the button is clicked.</summary>
+            <param name="sender">The sender object of the event handler.</param>
+            <param name="e">The state information of the event handler.</param>
+        </member>
+        <member name="M:Emi.UserControls.MainWindow.ShowDialogButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>Shows a modal <see cref="T:Emi.UserControls.FileSystemBrowserWindow"/> when the button is clicked.</summary>
+            <param name="sender">The sender object of the event handler.</param>
+            <param name="e">The state information of the event handler.</param>
+        </member>
+        <member name="M:Emi.UserControls.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>

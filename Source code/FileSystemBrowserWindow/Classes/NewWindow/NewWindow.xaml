@@ -1,0 +1,45 @@
+﻿<!--
+Copyright © 2016–2017, 2019 eMedia Intellect.
+
+This file is part of eMI User Controls Library.
+
+eMI User Controls Library is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+eMI User Controls Library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with eMI User Controls Library. If not, see http://www.gnu.org/licenses/.
+-->
+<Window ResizeMode="NoResize" ShowInTaskbar="False" SizeToContent="Height" Title="{x:Static resource:NewWindow.WindowTitle}" Topmost="True" Width="400" WindowStartupLocation="CenterOwner" x:Class="Emi.UserControls.NewWindow" x:ClassModifier="internal" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:resource="clr-namespace:Emi.UserControls.Resources" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<Grid Margin="10">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto"/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<Label Content="{x:Static resource:NewWindow.NameLabel}" Grid.Column="0" Grid.Row="0" Margin="0, 0, 0, 4" Padding="0, 5, 5, 5" VerticalAlignment="Center"/>
+		<TextBox Grid.Column="1" Grid.Row="0" Margin="0, 0, 0, 4" TextChanged="NameTextBox_TextChanged" VerticalContentAlignment="Center" Width="Auto" x:Name="nameTextBox"/>
+		<TextBlock Foreground="Red" Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" Visibility="Collapsed" x:Name="errorTextBlock"/>
+		<DockPanel Grid.Column="1" Grid.Row="2" Margin="0, 4, 0, 0">
+			<StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+				<RadioButton Checked="FolderRadioButton_Checked" Content="{x:Static resource:NewWindow.FolderRadioButton}" IsChecked="True" Margin="0, 0, 4, 0" VerticalAlignment="Center" x:Name="folderRadioButton"/>
+				<RadioButton Checked="FileRadioButton_Checked" Content="{x:Static resource:NewWindow.FileRadioButton}" Margin="4, 0, 0, 0" VerticalAlignment="Center" x:Name="fileRadioButton"/>
+			</StackPanel>
+			<StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+				<Button Click="CreateButton_Click" Content="{x:Static resource:NewWindow.CreateButton}" IsDefault="True" IsEnabled="False" Margin="0, 0, 4, 0" Padding="15, 2" x:Name="createButton"/>
+				<Button Content="{x:Static resource:NewWindow.CancelButton}" IsCancel="True" Margin="4, 0, 0, 0" Padding="15, 2"/>
+			</StackPanel>
+		</DockPanel>
+	</Grid>
+</Window>

@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Emi.UserControls.CloseableTabItem</name>
+    </assembly>
+    <members>
+        <member name="T:Emi.UserControls.CloseableHeader">
+            <summary>Provides a closeable header for the <see cref="T:Emi.UserControls.CloseableTabItem"/> class.</summary>
+        </member>
+        <member name="M:Emi.UserControls.CloseableHeader.#ctor">
+            <summary>Initialises a new instance of the <see cref="T:Emi.UserControls.CloseableHeader"/> class.</summary>
+        </member>
+        <member name="M:Emi.UserControls.CloseableHeader.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Emi.UserControls.CloseableTabItem">
+            <summary>Provides a closeable tab item for the <see cref="T:System.Windows.Controls.TabControl"/> class.</summary>
+            <content>Contains the <see cref="M:Emi.UserControls.CloseableTabItem.CloseButton_Click(System.Object,System.Windows.RoutedEventArgs)"/> method.</content>
+            <content>Contains the <see cref="M:Emi.UserControls.CloseableTabItem.CloseButton_MouseEnter(System.Object,System.Windows.Input.MouseEventArgs)"/> method.</content>
+            <content>Contains the <see cref="M:Emi.UserControls.CloseableTabItem.CloseButton_MouseLeave(System.Object,System.Windows.Input.MouseEventArgs)"/> method.</content>
+            <content>Contains the <see cref="M:Emi.UserControls.CloseableTabItem.OnMouseEnter(System.Windows.Input.MouseEventArgs)"/> method.</content>
+            <content>Contains the <see cref="M:Emi.UserControls.CloseableTabItem.OnMouseLeave(System.Windows.Input.MouseEventArgs)"/> method.</content>
+            <content>Contains the <see cref="M:Emi.UserControls.CloseableTabItem.OnSelected(System.Windows.RoutedEventArgs)"/> method.</content>
+            <content>Contains the <see cref="M:Emi.UserControls.CloseableTabItem.OnUnselected(System.Windows.RoutedEventArgs)"/> method.</content>
+            <content>Contains the <see cref="M:Emi.UserControls.CloseableTabItem.TitleLabel_SizeChanged(System.Object,System.Windows.SizeChangedEventArgs)"/> method.</content>
+            <content>Contains the <see cref="P:Emi.UserControls.CloseableTabItem.IsCloseable"/> property.</content>
+            <content>Contains the <see cref="P:Emi.UserControls.CloseableTabItem.Title"/> property.</content>
+        </member>
+        <member name="F:Emi.UserControls.CloseableTabItem.isCloseable">
+            <summary>Indicates whether the tab item is closeable.</summary>
+            <remarks>The store for the <see cref="P:Emi.UserControls.CloseableTabItem.IsCloseable"/> property.</remarks>
+        </member>
+        <member name="F:Emi.UserControls.CloseableTabItem.closeableHeader">
+            <summary>The closeable header of the tab item.</summary>
+        </member>
+        <member name="F:Emi.UserControls.CloseableTabItem.title">
+            <summary>The title to display in the header of the tab item.</summary>
+            <remarks>The store for the <see cref="P:Emi.UserControls.CloseableTabItem.Title"/> property.</remarks>
+        </member>
+        <member name="M:Emi.UserControls.CloseableTabItem.#ctor">
+            <summary>Initialises a new instance of the <see cref="T:Emi.UserControls.CloseableTabItem"/> class.</summary>
+        </member>
+        <member name="M:Emi.UserControls.CloseableTabItem.CloseButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>Removes the tab item from the tab control when the close button is clicked.</summary>
+            <param name="sender">The sender object of the event handler.</param>
+            <param name="e">The state information of the event handler.</param>
+        </member>
+        <member name="M:Emi.UserControls.CloseableTabItem.CloseButton_MouseEnter(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>Changes the colour of the close button when the mouse enters (hovers over) the close button.</summary>
+            <param name="sender">The sender object of the event handler.</param>
+            <param name="e">The state information of the event handler.</param>
+        </member>
+        <member name="M:Emi.UserControls.CloseableTabItem.CloseButton_MouseLeave(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>Changes the colour of the close button when the mouse leaves (hovers off) the close button.</summary>
+            <param name="sender">The sender object of the event handler.</param>
+            <param name="e">The state information of the event handler.</param>
+        </member>
+        <member name="M:Emi.UserControls.CloseableTabItem.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <summary>Makes the close button visible when the mouse enters (hovers over) the closeable tab item.</summary>
+            <param name="e">The state information of the event handler.</param>
+        </member>
+        <member name="M:Emi.UserControls.CloseableTabItem.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <summary>Makes the close button invisible when the mouse leaves (hovers off) the closeable tab item.</summary>
+            <param name="e">The state information of the event handler.</param>
+        </member>
+        <member name="M:Emi.UserControls.CloseableTabItem.OnSelected(System.Windows.RoutedEventArgs)">
+            <summary>Makes the close button visible when the closeable tab item is selected.</summary>
+            <param name="e">The state information of the event handler.</param>
+        </member>
+        <member name="M:Emi.UserControls.CloseableTabItem.OnUnselected(System.Windows.RoutedEventArgs)">
+            <summary>Makes the close button invisible when the closeable tab item is unselected.</summary>
+            <param name="e">The state information of the event handler.</param>
+        </member>
+        <member name="M:Emi.UserControls.CloseableTabItem.TitleLabel_SizeChanged(System.Object,System.Windows.SizeChangedEventArgs)">
+            <summary>Resizes the margin of the close button when the size of the <see cref="F:Emi.UserControls.CloseableHeader.titleLabel"/> field changes.</summary>
+            <param name="sender">The sender object of the event handler.</param>
+            <param name="e">The state information of the event handler.</param>
+        </member>
+        <member name="P:Emi.UserControls.CloseableTabItem.IsCloseable">
+            <summary>Gets or sets a value indicating whether the tab item is closeable.</summary>
+            <remarks>If the value is set to true then the header is a <see cref="T:Emi.UserControls.CloseableHeader"/> containing the <see cref="F:Emi.UserControls.CloseableTabItem.title"/> and a close button. If the value is set to false then the header is the <see cref="F:Emi.UserControls.CloseableTabItem.title"/>.</remarks>
+            <value>Represents the <see cref="F:Emi.UserControls.CloseableTabItem.isCloseable"/> field.</value>
+        </member>
+        <member name="P:Emi.UserControls.CloseableTabItem.Title">
+            <summary>Gets or sets a value indicating the title of the tab item.</summary>
+            <remarks>If <see cref="F:Emi.UserControls.CloseableTabItem.isCloseable"/> is set to false then the header of the tab item is updated with the title. In any case, the <see cref="F:Emi.UserControls.CloseableTabItem.closeableHeader"/> field is updated with the title in case the <see cref="P:Emi.UserControls.CloseableTabItem.IsCloseable"/> property is changed to true.</remarks>
+            <value>Represents the <see cref="F:Emi.UserControls.CloseableTabItem.title"/> field.</value>
+        </member>
+    </members>
+</doc>

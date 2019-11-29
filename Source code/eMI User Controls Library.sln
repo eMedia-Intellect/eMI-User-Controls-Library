@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloseableTabItem", "CloseableTabItem\CloseableTabItem.csproj", "{2FD08838-FC67-4F24-94B6-236D75351BB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloseableTabItemTesting", "CloseableTabItemTesting\CloseableTabItemTesting.csproj", "{6E14F2B2-2D7B-4D09-869B-1120090A814A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemBrowserWindow", "FileSystemBrowserWindow\FileSystemBrowserWindow.csproj", "{8FFCD607-FC0C-48AA-B9E1-11C6DEEAE150}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemBrowserWindowTesting", "FileSystemBrowserWindowTesting\FileSystemBrowserWindowTesting.csproj", "{4EDCA3D5-A55D-4A7D-BC1F-C55AB8939FB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D368255E-C3F4-4992-8DCC-402BAF062384}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Items\CodeAnalysisDictionary.xml = Solution Items\CodeAnalysisDictionary.xml
+		Solution Items\GlobalAssemblyInfo.cs = Solution Items\GlobalAssemblyInfo.cs
+		Settings.StyleCop = Settings.StyleCop
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Description = A solution of user control projects.
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FD08838-FC67-4F24-94B6-236D75351BB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FD08838-FC67-4F24-94B6-236D75351BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FD08838-FC67-4F24-94B6-236D75351BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FD08838-FC67-4F24-94B6-236D75351BB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E14F2B2-2D7B-4D09-869B-1120090A814A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E14F2B2-2D7B-4D09-869B-1120090A814A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E14F2B2-2D7B-4D09-869B-1120090A814A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E14F2B2-2D7B-4D09-869B-1120090A814A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FFCD607-FC0C-48AA-B9E1-11C6DEEAE150}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FFCD607-FC0C-48AA-B9E1-11C6DEEAE150}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FFCD607-FC0C-48AA-B9E1-11C6DEEAE150}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FFCD607-FC0C-48AA-B9E1-11C6DEEAE150}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EDCA3D5-A55D-4A7D-BC1F-C55AB8939FB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EDCA3D5-A55D-4A7D-BC1F-C55AB8939FB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EDCA3D5-A55D-4A7D-BC1F-C55AB8939FB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EDCA3D5-A55D-4A7D-BC1F-C55AB8939FB9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE62603E-6FF2-44C4-95DE-6A744AFF8D61}
+	EndGlobalSection
+EndGlobal

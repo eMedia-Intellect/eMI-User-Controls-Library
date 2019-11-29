@@ -1,0 +1,158 @@
+﻿<!--
+Copyright © 2016–2017, 2019 eMedia Intellect.
+
+This file is part of eMI User Controls Library.
+
+eMI User Controls Library is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+eMI User Controls Library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with eMI User Controls Library. If not, see http://www.gnu.org/licenses/.
+-->
+<Window WindowState="Maximized" Title="FileSystemBrowserWindowTesting" x:Class="Emi.UserControls.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<ScrollViewer>
+		<Grid Margin="4">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+			<GroupBox Grid.Column="0" Grid.Row="0" Header="BrowserSettings" Margin="4, 0, 4, 4" Padding="4">
+				<StackPanel>
+					<GroupBox Header="Common">
+						<StackPanel>
+							<WrapPanel Margin="4">
+								<Label Content="Path:" Margin="4"/>
+								<TextBox Margin="4" Padding="2" VerticalAlignment="Center" Width="300" x:Name="pathTextBox"/>
+								<Label Content="BrowsingMode:" Margin="8, 4, 4, 4"/>
+								<ComboBox Margin="4" VerticalAlignment="Center" x:Name="browsingModeComboBox"/>
+								<Label Content="ByteMultiple:" Margin="8, 4, 4, 4"/>
+								<ComboBox Margin="4" VerticalAlignment="Center" x:Name="byteMultipleComboBox"/>
+								<Label Content="Icon:" Margin="8, 4, 4, 4"/>
+								<TextBox Margin="4" Padding="2" VerticalAlignment="Center" Width="300" x:Name="iconTextBox"/>
+							</WrapPanel>
+							<WrapPanel Margin="4">
+								<CheckBox Content="HasAvailableFreeSpace" Margin="4" x:Name="hasAvailableFreeSpaceCheckBox"/>
+								<CheckBox Content="HasDriveType" Margin="8, 4, 4, 4" x:Name="hasDriveTypeCheckBox"/>
+								<CheckBox Content="HasDriveFormat" Margin="8, 4, 4, 4" x:Name="hasDriveFormatCheckBox"/>
+								<CheckBox Content="HasRootDirectory" Margin="8, 4, 4, 4" x:Name="hasRootDirectoryCheckBox"/>
+								<CheckBox Content="HasTotalFreeSpace" Margin="8, 4, 4, 4" x:Name="hasTotalFreeSpaceCheckBox"/>
+								<CheckBox Content="HasTotalSize" Margin="8, 4, 4, 4" x:Name="hasTotalSizeCheckBox"/>
+								<CheckBox Content="HasVolumeLabel" Margin="8, 4, 4, 4" x:Name="hasVolumeLabelCheckBox"/>
+							</WrapPanel>
+						</StackPanel>
+					</GroupBox>
+					<GroupBox Header="Directory/File Selection">
+						<WrapPanel Margin="4">
+							<Label Content="MinimumFiles:" Margin="4"/>
+							<TextBox HorizontalContentAlignment="Right" Margin="4" Padding="2" VerticalAlignment="Center" Width="30" x:Name="minimumFilesTextBox"/>
+							<Label Content="MaximumFiles:" Margin="8, 4, 4, 4"/>
+							<TextBox HorizontalContentAlignment="Right" Margin="4" Padding="2" VerticalAlignment="Center" Width="30" x:Name="maximumFilesTextBox"/>
+							<Label Content="MinimumDirectories:" Margin="8, 4, 4, 4"/>
+							<TextBox HorizontalContentAlignment="Right" Margin="4" Padding="2" VerticalAlignment="Center" Width="30" x:Name="minimumDirectoriesTextBox"/>
+							<Label Content="MaximumDirectories:" Margin="8, 4, 4, 4"/>
+							<TextBox HorizontalContentAlignment="Right" Margin="4" Padding="2" VerticalAlignment="Center" Width="30" x:Name="maximumDirectoriesTextBox"/>
+						</WrapPanel>
+					</GroupBox>
+					<GroupBox Header="File Saving">
+						<StackPanel Margin="4">
+							<WrapPanel>
+								<CheckBox Content="CanSelectEncoding" Margin="4" VerticalAlignment="Center" x:Name="canSelectEncodingCheckBox"/>
+								<Label Content="DefaultFileName:" Margin="8, 4, 4, 4"/>
+								<TextBox Margin="4" Padding="2" VerticalAlignment="Center" Width="150" x:Name="defaultFileNameTextBox"/>
+								<Label Content="DefaultEncoding:" Margin="8, 4, 4, 4"/>
+								<ComboBox Margin="4" VerticalAlignment="Center" x:Name="defaultEncodingComboBox">
+								<ComboBoxItem Content="UTF-8" IsSelected="True"/>
+								<ComboBoxItem Content="UTF-8 (BOM)"/>
+								<ComboBoxItem Content="UTF-16 (BOM, LE)"/>
+								<ComboBoxItem Content="UTF-16 (BOM, BE)"/>
+								<ComboBoxItem Content="UTF-32 (BOM, LE)"/>
+								<ComboBoxItem Content="UTF-32 (BOM, BE)"/>
+								</ComboBox>
+							</WrapPanel>
+							<GroupBox Header="SupportedFileTypes">
+								<Grid>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition/>
+										<ColumnDefinition/>
+									</Grid.ColumnDefinitions>
+									<Grid.RowDefinitions>
+										<RowDefinition/>
+										<RowDefinition/>
+										<RowDefinition/>
+										<RowDefinition/>
+										<RowDefinition/>
+										<RowDefinition/>
+									</Grid.RowDefinitions>
+									<Label Grid.Column="0" Grid.Row="0" Content="Key:"/>
+									<TextBox Grid.Column="0" Grid.Row="1" Margin="4" Padding="2" VerticalAlignment="Center" x:Name="key1TextBox"/>
+									<TextBox Grid.Column="0" Grid.Row="2" Margin="4" Padding="2" VerticalAlignment="Center" x:Name="key2TextBox"/>
+									<TextBox Grid.Column="0" Grid.Row="3" Margin="4" Padding="2" VerticalAlignment="Center" x:Name="key3TextBox"/>
+									<TextBox Grid.Column="0" Grid.Row="4" Margin="4" Padding="2" VerticalAlignment="Center" x:Name="key4TextBox"/>
+									<TextBox Grid.Column="0" Grid.Row="5" Margin="4" Padding="2" VerticalAlignment="Center" x:Name="key5TextBox"/>
+									<Label Grid.Column="1" Grid.Row="0" Content="Value:"/>
+									<TextBox Grid.Column="1" Grid.Row="1" Margin="4" Padding="2" VerticalAlignment="Center" x:Name="value1TextBox"/>
+									<TextBox Grid.Column="1" Grid.Row="2" Margin="4" Padding="2" VerticalAlignment="Center" x:Name="value2TextBox"/>
+									<TextBox Grid.Column="1" Grid.Row="3" Margin="4" Padding="2" VerticalAlignment="Center" x:Name="value3TextBox"/>
+									<TextBox Grid.Column="1" Grid.Row="4" Margin="4" Padding="2" VerticalAlignment="Center" x:Name="value4TextBox"/>
+									<TextBox Grid.Column="1" Grid.Row="5" Margin="4" Padding="2" VerticalAlignment="Center" x:Name="value5TextBox"/>
+								</Grid>
+							</GroupBox>
+						</StackPanel>
+					</GroupBox>
+				</StackPanel>
+			</GroupBox>
+			<GroupBox Grid.Column="0" Grid.Row="1" Header="FileFilter" Margin="4" Padding="4">
+				<WrapPanel>
+					<Label Content="FilteringMode:" Margin="4"/>
+					<ComboBox Margin="4" VerticalAlignment="Center" x:Name="filteringModeComboBox"/>
+					<Label Content="Extensions:" Margin="8, 4, 4, 4"/>
+					<TextBox Margin="4" Padding="2" VerticalAlignment="Center" Width="150" x:Name="extensionsTextBox"/>
+				</WrapPanel>
+			</GroupBox>
+			<GroupBox Grid.Column="0" Grid.Row="2" Header="Result" Margin="4" Padding="4">
+				<StackPanel>
+					<WrapPanel Margin="4">
+						<Label Content="CurrentPath:" Margin="4"/>
+						<TextBox IsReadOnly="True" Margin="4" Padding="2" VerticalAlignment="Center" Width="300" x:Name="currentPathTextBox"/>
+					</WrapPanel>
+					<GroupBox Header="BrowsnigMode: Open/Select">
+						<ListView Height="250" Margin="4" x:Name="openOrSelectListView">
+							<ListView.View>
+								<GridView>
+									<GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}" Width="60"/>
+									<GridViewColumn Header="Path" DisplayMemberBinding="{Binding Path}" Width="600"/>
+								</GridView>
+							</ListView.View>
+						</ListView>
+					</GroupBox>
+					<GroupBox Header="BrowsnigMode: Save">
+						<WrapPanel Margin="4">
+							<Label Content="SelectedSavingFileEncoding:" Margin="4"/>
+							<TextBox IsReadOnly="True" Margin="4" Padding="2" VerticalAlignment="Center" Width="150" x:Name="savingFileEncodingTextBox"/>
+							<Label Content="SelectedSavingFilePath:" Margin="8, 4, 4, 4"/>
+							<TextBox IsReadOnly="True" Margin="4" Padding="2" VerticalAlignment="Center" Width="300" x:Name="savingFilePathTextBox"/>
+							<Label Content="SelectedSavingFileType:" Margin="8, 4, 4, 4"/>
+							<TextBox IsReadOnly="True" Margin="4" Padding="2" VerticalAlignment="Center" Width="30" x:Name="savingFileTypeTextBox"/>
+						</WrapPanel>
+					</GroupBox>
+				</StackPanel>
+			</GroupBox>
+			<WrapPanel Grid.Column="0" Grid.Row="3" Margin="4, 4, 4, 0">
+				<Button Click="ShowDialogButton_Click" Content="Show dialog" Margin="4" Padding="4, 2"/>
+				<Button Click="ResetButton_Click" Content="Reset" Margin="4" Padding="4, 2"/>
+			</WrapPanel>
+		</Grid>
+	</ScrollViewer>
+</Window>

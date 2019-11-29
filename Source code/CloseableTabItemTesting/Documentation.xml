@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Emi.UserControls.CloseableTabItemTesting</name>
+    </assembly>
+    <members>
+        <member name="T:Emi.UserControls.App">
+            <summary>Represents the application.</summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:Emi.UserControls.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Emi.UserControls.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:Emi.UserControls.MainWindow">
+            <summary>Represents the main window of the application.</summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:Emi.UserControls.MainWindow.#ctor">
+            <summary>Initialises a new instance of the <see cref="T:Emi.UserControls.MainWindow"/> class.</summary>
+        </member>
+        <member name="M:Emi.UserControls.MainWindow.AddButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>Adds a new <see cref="T:Emi.UserControls.CloseableTabItem"/> to the <see cref="F:Emi.UserControls.MainWindow.tabControl"/> when the add button is clicked.</summary>
+            <param name="sender">The sender object of the event handler.</param>
+            <param name="e">The state information of the event handler.</param>
+        </member>
+        <member name="M:Emi.UserControls.MainWindow.ClearButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>Clears the <see cref="F:Emi.UserControls.MainWindow.tabControl"/> when the clear button is clicked.</summary>
+            <param name="sender">The sender object of the event handler.</param>
+            <param name="e">The state information of the event handler.</param>
+        </member>
+        <member name="M:Emi.UserControls.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright © 2016–2017, 2019 eMedia Intellect.
+
+This file is part of eMI User Controls Library.
+
+eMI User Controls Library is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+eMI User Controls Library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with eMI User Controls Library. If not, see http://www.gnu.org/licenses/.
+-->
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<SolutionProject>FileSystemBrowserWindow</SolutionProject>
+	</PropertyGroup>
+	<Import Project="..\Solution.props"/>
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<ProjectGuid>{8FFCD607-FC0C-48AA-B9E1-11C6DEEAE150}</ProjectGuid>
+		<ProjectTypeGuids>{60DC8134-EBA5-43B8-BCC9-BB4BC16C2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+	</PropertyGroup>
+	<ItemGroup>
+		<Reference Include="PresentationCore"/>
+		<Reference Include="PresentationFramework"/>
+		<Reference Include="System"/>
+		<Reference Include="System.Xaml"/>
+		<Reference Include="System.Windows"/>
+		<Reference Include="WindowsBase"/>
+	</ItemGroup>
+	<ItemGroup>
+		<CodeAnalysisDictionary Include="..\Solution Items\CodeAnalysisDictionary.xml">
+			<Link>Properties\CodeAnalysisDictionary.xml</Link>
+		</CodeAnalysisDictionary>
+		<Compile Include="..\Solution Items\GlobalAssemblyInfo.cs">
+			<Link>Properties\GlobalAssemblyInfo.cs</Link>
+		</Compile>
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Include="Classes\BrowserSettings.cs"/>
+		<Compile Include="Classes\DeleteWindow\Classes\FileOperation.cs"/>
+		<Compile Include="Classes\DeleteWindow\Classes\FileSystemItemDeletion.cs"/>
+		<Compile Include="Classes\DeleteWindow\Classes\NameComparer.cs"/>
+		<Compile Include="Classes\DeleteWindow\DeleteWindow.xaml.cs">
+			<DependentUpon>DeleteWindow.xaml</DependentUpon>
+		</Compile>
+		<Compile Include="Classes\DeleteWindow\Enumerations\DeletionStatus.cs"/>
+		<Compile Include="Classes\DeleteWindow\Methods\DeleteDirectories.cs"/>
+		<Compile Include="Classes\DeleteWindow\Methods\DeleteFiles.cs"/>
+		<Compile Include="Classes\DeleteWindow\Methods\Event handlers\DeleteButton_Click.cs"/>
+		<Compile Include="Classes\DeleteWindow\Methods\ListFileSystemItems.cs"/>
+		<Compile Include="Classes\ErrorWindow.xaml.cs">
+			<DependentUpon>ErrorWindow.xaml</DependentUpon>
+		</Compile>
+		<Compile Include="Classes\FileFilter.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Classes\ByteConverter.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Classes\Comparers\AvailableFreeSpaceComparer.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Classes\Comparers\CreationTimeComparer.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Classes\Comparers\DriveFormatComparer.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Classes\Comparers\DriveTypeComparer.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Classes\Comparers\LastAccessTimeComparer.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Classes\Comparers\LastWriteTimeComparer.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Classes\Comparers\RootDirectoryComparer.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Classes\Comparers\SizeComparer.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Classes\Comparers\TotalFreeSpaceComparer.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Classes\Comparers\TotalSizeComparer.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Classes\Comparers\VolumeLabelComparer.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Classes\FileSystemItem.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Classes\FileSystemItemSorter.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Classes\PathButton.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Classes\PathManipulator.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Enumerations\FileSystemItemType.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Enumerations\SortingColumn.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\FileSystemBrowserWindow.xaml.cs">
+			<DependentUpon>FileSystemBrowserWindow.xaml</DependentUpon>
+		</Compile>
+		<Compile Include="Classes\FileSystemBrowserWindow\Methods\AdjustFileSystemListView.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Methods\Event handlers\ActionButton_Click.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Methods\Event handlers\ColumnHeaderAscending_PreviewMouseUp.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Methods\Event handlers\ColumnHeaderDescending_PreviewMouseUp.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Methods\Event handlers\DeleteButton_Click.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Methods\Event handlers\FileNameTextBox_TextChanged.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Methods\Event handlers\FileSystemBrowserWindow_KeyUp.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Methods\Event handlers\FileSystemBrowserWindow_Loaded.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Methods\Event handlers\FileSystemListView_MouseDoubleClick.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Methods\Event handlers\FileSystemListView_SelectionChanged.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Methods\Event handlers\NewButton_Click.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Methods\Event handlers\PathButton_Click.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Methods\Event handlers\RenameButton_Click.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Methods\Event handlers\UnicodeRadioButton_Click.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Methods\GenerateFileSystemItems.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Methods\GeneratePathButtons.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Methods\InitialiseColumnHeaderGrid.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Methods\NavigateFileSystem.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Methods\RemoveGridImageChildren.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Properties\CurrentPath.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Properties\SelectedDirectories.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Properties\SelectedSavingFileEncoding.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Properties\SelectedSavingFileType.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Properties\SelectedSavingFilePath.cs"/>
+		<Compile Include="Classes\FileSystemBrowserWindow\Properties\SelectedFiles.cs"/>
+		<Compile Include="Classes\FileTypeComboBoxItem.cs"/>
+		<Compile Include="Classes\MinimumGreaterThanMaximumException.cs"/>
+		<Compile Include="Classes\NativeMethods.cs"/>
+		<Compile Include="Classes\NewWindow\Methods\CheckExistence.cs"/>
+		<Compile Include="Classes\NewWindow\Methods\CreateDirectory.cs"/>
+		<Compile Include="Classes\NewWindow\Methods\CreateFile.cs"/>
+		<Compile Include="Classes\NewWindow\Methods\Event handlers\CreateButton_Click.cs"/>
+		<Compile Include="Classes\NewWindow\Methods\Event handlers\FileRadioButton_Checked.cs"/>
+		<Compile Include="Classes\NewWindow\Methods\Event handlers\FolderRadioButton_Checked.cs"/>
+		<Compile Include="Classes\NewWindow\Methods\Event handlers\NameTextBox_TextChanged.cs"/>
+		<Compile Include="Classes\NewWindow\NewWindow.xaml.cs">
+			<DependentUpon>NewWindow.xaml</DependentUpon>
+		</Compile>
+		<Compile Include="Classes\RenameWindow\Methods\Event handlers\NewTextBox_TextChanged.cs"/>
+		<Compile Include="Classes\RenameWindow\Methods\Event handlers\RenameButton_Click.cs"/>
+		<Compile Include="Classes\RenameWindow\Methods\RenameDirectory.cs"/>
+		<Compile Include="Classes\RenameWindow\Methods\RenameFile.cs"/>
+		<Compile Include="Classes\RenameWindow\RenameWindow.xaml.cs">
+			<DependentUpon>RenameWindow.xaml</DependentUpon>
+		</Compile>
+		<Compile Include="Enumerations\BrowsingMode.cs"/>
+		<Compile Include="Enumerations\ByteMultiple.cs"/>
+		<Compile Include="Enumerations\FilteringMode.cs"/>
+		<Compile Include="GlobalSuppressions.cs"/>
+		<Compile Include="Interfaces\Interop\IFileOperation.cs"/>
+		<Compile Include="Interfaces\Interop\IShellItem.cs"/>
+		<Compile Include="Properties\AssemblyInfo.cs"/>
+		<Compile Include="Resources\DeleteWindow.Designer.cs">
+			<AutoGen>True</AutoGen>
+			<DependentUpon>DeleteWindow.resx</DependentUpon>
+			<DesignTime>True</DesignTime>
+		</Compile>
+		<Compile Include="Resources\ErrorWindow.Designer.cs">
+			<AutoGen>True</AutoGen>
+			<DependentUpon>ErrorWindow.resx</DependentUpon>
+			<DesignTime>True</DesignTime>
+		</Compile>
+		<Compile Include="Resources\FileSystemBrowserWindow\Buttons.Designer.cs">
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Buttons.resx</DependentUpon>
+			<DesignTime>True</DesignTime>
+		</Compile>
+		<Compile Include="Resources\FileSystemBrowserWindow\Columns.Designer.cs">
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Columns.resx</DependentUpon>
+			<DesignTime>True</DesignTime>
+		</Compile>
+		<Compile Include="Resources\FileSystemBrowserWindow\DriveTypeEnumerations.Designer.cs">
+			<AutoGen>True</AutoGen>
+			<DependentUpon>DriveTypeEnumerations.resx</DependentUpon>
+			<DesignTime>True</DesignTime>
+		</Compile>
+		<Compile Include="Resources\FileSystemBrowserWindow\NavigationButtons.Designer.cs">
+			<AutoGen>True</AutoGen>
+			<DependentUpon>NavigationButtons.resx</DependentUpon>
+			<DesignTime>True</DesignTime>
+		</Compile>
+		<Compile Include="Resources\FileSystemBrowserWindow\PathButton.Designer.cs">
+			<AutoGen>True</AutoGen>
+			<DependentUpon>PathButton.resx</DependentUpon>
+			<DesignTime>True</DesignTime>
+		</Compile>
+		<Compile Include="Resources\FileSystemBrowserWindow\SaveFile.Designer.cs">
+			<AutoGen>True</AutoGen>
+			<DependentUpon>SaveFile.resx</DependentUpon>
+			<DesignTime>True</DesignTime>
+		</Compile>
+		<Compile Include="Resources\FileSystemBrowserWindow\WindowTitles.Designer.cs">
+			<AutoGen>True</AutoGen>
+			<DependentUpon>WindowTitles.resx</DependentUpon>
+			<DesignTime>True</DesignTime>
+		</Compile>
+		<Compile Include="Resources\NewWindow.Designer.cs">
+			<AutoGen>True</AutoGen>
+			<DependentUpon>NewWindow.resx</DependentUpon>
+			<DesignTime>True</DesignTime>
+		</Compile>
+		<Compile Include="Resources\RenameWindow.Designer.cs">
+			<AutoGen>True</AutoGen>
+			<DependentUpon>RenameWindow.resx</DependentUpon>
+			<DesignTime>True</DesignTime>
+		</Compile>
+		<EmbeddedResource Include="Resources\DeleteWindow.en.resx"/>
+		<EmbeddedResource Include="Resources\DeleteWindow.es.resx"/>
+		<EmbeddedResource Include="Resources\DeleteWindow.is.resx"/>
+		<EmbeddedResource Include="Resources\DeleteWindow.resx">
+			<Generator>PublicResXFileCodeGenerator</Generator>
+			<LastGenOutput>DeleteWindow.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resources\ErrorWindow.en.resx"/>
+		<EmbeddedResource Include="Resources\ErrorWindow.en-GB.resx"/>
+		<EmbeddedResource Include="Resources\ErrorWindow.en-US.resx"/>
+		<EmbeddedResource Include="Resources\ErrorWindow.es.resx"/>
+		<EmbeddedResource Include="Resources\ErrorWindow.is.resx"/>
+		<EmbeddedResource Include="Resources\ErrorWindow.resx">
+			<Generator>PublicResXFileCodeGenerator</Generator>
+			<LastGenOutput>ErrorWindow.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\Buttons.en.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\Buttons.es.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\Buttons.is.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\Buttons.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Buttons.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\Columns.en.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\Columns.es.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\Columns.is.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\Columns.resx">
+			<Generator>PublicResXFileCodeGenerator</Generator>
+			<LastGenOutput>Columns.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\DriveTypeEnumerations.en.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\DriveTypeEnumerations.es.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\DriveTypeEnumerations.is.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\DriveTypeEnumerations.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>DriveTypeEnumerations.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\NavigationButtons.en.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\NavigationButtons.es.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\NavigationButtons.is.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\NavigationButtons.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>NavigationButtons.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\PathButton.en.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\PathButton.es-CL.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\PathButton.es-ES.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\PathButton.es.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\PathButton.is.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\PathButton.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>PathButton.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\SaveFile.en.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\SaveFile.es.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\SaveFile.is.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\SaveFile.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>SaveFile.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\WindowTitles.en.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\WindowTitles.es.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\WindowTitles.is.resx"/>
+		<EmbeddedResource Include="Resources\FileSystemBrowserWindow\WindowTitles.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>WindowTitles.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resources\NewWindow.en.resx"/>
+		<EmbeddedResource Include="Resources\NewWindow.es.resx"/>
+		<EmbeddedResource Include="Resources\NewWindow.is.resx"/>
+		<EmbeddedResource Include="Resources\NewWindow.resx">
+			<Generator>PublicResXFileCodeGenerator</Generator>
+			<LastGenOutput>NewWindow.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resources\RenameWindow.en.resx"/>
+		<EmbeddedResource Include="Resources\RenameWindow.es.resx"/>
+		<EmbeddedResource Include="Resources\RenameWindow.is.resx"/>
+		<EmbeddedResource Include="Resources\RenameWindow.resx">
+			<Generator>PublicResXFileCodeGenerator</Generator>
+			<LastGenOutput>RenameWindow.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<Page Include="Classes\DeleteWindow\DeleteWindow.xaml">
+			<Generator>MSBuild:Compile</Generator>
+			<SubType>Designer</SubType>
+		</Page>
+		<Page Include="Classes\ErrorWindow.xaml">
+			<Generator>MSBuild:Compile</Generator>
+			<SubType>Designer</SubType>
+		</Page>
+		<Page Include="Classes\FileSystemBrowserWindow\FileSystemBrowserWindow.xaml">
+			<Generator>MSBuild:Compile</Generator>
+			<SubType>Designer</SubType>
+		</Page>
+		<Page Include="Classes\NewWindow\NewWindow.xaml">
+			<Generator>MSBuild:Compile</Generator>
+			<SubType>Designer</SubType>
+		</Page>
+		<Page Include="Classes\RenameWindow\RenameWindow.xaml">
+			<Generator>MSBuild:Compile</Generator>
+			<SubType>Designer</SubType>
+		</Page>
+		<Resource Include="Images\ArrowAscending.png"/>
+		<Resource Include="Images\ArrowDescending.png"/>
+		<Resource Include="Images\Directory.png"/>
+		<Resource Include="Images\File.png"/>
+	</ItemGroup>
+	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+</Project>

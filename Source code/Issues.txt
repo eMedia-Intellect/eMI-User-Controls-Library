@@ -1,0 +1,6 @@
+* FileSystemBrowserWindow
+** DeleteWindow
+*** The process of deleting directories and files in DeleteDirectories.cs and DeleteFiles.cs does not accurately report the success of operations. The IFileOperationProgressSink interface is required for this purpose.
+** FileSystemBrowserWindow
+*** On each navigation, the vertical scroll bar is reset to the top. The horizontal scroll bar should also be reset to the left.
+*** Clicking the sorting arrow icons in the column headers does not result in sorting. Only clicking the text in the column headers does result in sorting.
